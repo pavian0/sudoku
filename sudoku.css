@@ -3,11 +3,16 @@ div.square-selected{
   background-color: lightblue;
   width: 20px;
   height: 20px;
+  align-items: center;
+  justify-content: center;
 }
 div.square-default{
   background-color: lightgrey;
   width: 20px;
   height: 20px;
+  color: blue;
+  align-items: center;
+  justify-content: center;
 }
 div.position3{
   height: 80%;
