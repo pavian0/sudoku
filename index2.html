@@ -2,16 +2,20 @@
 <head>
 <title>SUDOKU V1</title>
 <link rel="stylesheet" type="text/css" href="sudoku.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="sudoku.js"></script>
 </head>
 <body>
   <div class="position3">
+    <div id="test" style="width:100px; height:100px; background-color:#ff0000" tabindex="0"></div>
+
   <table>
     <tr>
       <td><table>
   <tr>
-    <td><div id = '11' class="square-default"> </div></td>
-    <td><div id = '12' class="square-default"> </div></td>
-    <td><div id = '13' class="square-default"> </div></td>
+    <td><div id = '11' tabindex="11" class="square-default"> </div></td>
+    <td><div id = '12' tabindex="12" class="square-default"> </div></td>
+    <td><div id = '13' tabindex="13" class="square-default"> </div></td>
   </tr>
   <tr>
     <td><div id = '21' class="square-default"></div></td>
