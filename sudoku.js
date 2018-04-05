@@ -28,15 +28,18 @@ function checkValue(x,y,value) {
   }
 }
 function insertValue(number){
-  document.getElementById(this).innerHTML = number;
+  //document.getElementById(this).innerHTML = number;
+  document.activeElement.innerHTML = number;
 }
 
 function fillField(keyCode){
   if(keyCode >= 49 && keyCode <= 57){
     var number = keyCode - 48;
     console.log("You pressed key: " + number);
+    console.log("Filling active element with number: " + number);
+    insertValue(number);
   } else {
-    //console.log("This is not a number between 1 and 9!");
+    console.log("This is not a number between 1 and 9!");
   }
 }
 
@@ -46,10 +49,11 @@ document.addEventListener("keydown", function(event) {
   //console.log(event.which);
 })
 
-document.("#test").hover(function() {
+/*document.("#test").hover(function() {
     this.focus();
 }, function() {
     this.blur();
 }).keydown(function(e) {
     alert(e.keyCode);
 });
+*/
