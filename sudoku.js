@@ -33,18 +33,37 @@ function insertValue(number){
 }
 
 function validateValue(number){
+  var duplicate = 0;
   //var digits = (""+divid).split("");
   let row = document.activeElement.getAttribute('row');
   let col = document.activeElement.getAttribute('col');
   var temp;
   let values = [];
   console.log("row: " + row + "col: " + col);
+  document.activeElement.style.color = "blue";
   for(i=1;i<=9;i++){
     temp = i + col;
-    console.log(temp);
+    //console.log(temp);
     values.push(document.getElementById(temp).innerHTML);
+    if(i != row && document.getElementById(temp).innerHTML == document.activeElement.innerHTML){
+      duplicate = 1;
+      document.activeElement.style.color = "red";
+      break;
+    }
+  }
+  console.log("column: " +values);
+  values.length = 0;
+  for(i=1;i<=9;i++){
+    temp = row + i;
+      values.push(document.getElementById(temp).innerHTML);
+      if(i != col && document.getElementById(temp).innerHTML == document.activeElement.innerHTML){
+        duplicate = 1;
+        document.activeElement.style.color = "red";
+        break;
+      }
   }
   console.log(values);
+  console.log("Duplicate: " + duplicate);
 }
 
 function fillField(keyCode){
@@ -55,8 +74,11 @@ function fillField(keyCode){
     console.log("Filling active element with number: " + number);
     insertValue(number);
     validateValue(number);
+  } else if (keyCode == 8 || keyCode == 46){
+    document.activeElement.innerHTML = '';
   } else {
     console.log("This is not a number between 1 and 9!");
+    console.log(keyCode);
   }
 }
 
