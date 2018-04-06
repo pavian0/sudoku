@@ -48,6 +48,7 @@ function validateValue(number){
     if(i != row && document.getElementById(temp).innerHTML == document.activeElement.innerHTML){
       duplicate = 1;
       document.activeElement.style.color = "red";
+      alert('W tej kolumnie występuje już wartość ' + number);
       break;
     }
   }
@@ -59,6 +60,7 @@ function validateValue(number){
       if(i != col && document.getElementById(temp).innerHTML == document.activeElement.innerHTML){
         duplicate = 1;
         document.activeElement.style.color = "red";
+        alert('W tym wierszu występuje już wartość ' + number);
         break;
       }
   }

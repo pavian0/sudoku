@@ -1,3 +1,8 @@
-add keytdown eventlistener
+--TODO--
 move focus with arrows
+check squares for duplilates
+--DONE--
 insert data with numbers
+add keytdown eventlistener
+check columns for duplicates
+check rows for duplicates 
