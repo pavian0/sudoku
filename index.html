@@ -1,109 +1,175 @@
 <html>
 <head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
 <title>SUDOKU V1</title>
 <link rel="stylesheet" type="text/css" href="sudoku.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="sudoku.js"></script>
 </head>
 <body>
-  <div class="position3">
-  <table >
+  <div class="position3"><!--
+    <div id="test" style="width:100px; height:100px; background-color:#ff0000" tabindex="0"></div>-->
+
+  <table>
     <tr>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
+      <td><table>
+  <tr>
+    <td><div id = '11' tabindex="11" row="1" col="1" class="square-default"> </div></td>
+    <td><div id = '12' tabindex="12" row="1" col="2" class="square-default"> </div></td>
+    <td><div id = '13' tabindex="13" row="1" col="3" class="square-default"> </div></td>
+  </tr>
+  <tr>
+    <td><div id = '21' tabindex="21" row="2" col="1" class="square-default"></div></td>
+    <td><div id = '22' tabindex="22" row="2" col="2" class="square-default"></div></td>
+    <td><div id = '23' tabindex="23" row="2" col="3" class="square-default"></div></td>
+  </tr>
+  <tr>
+    <td><div id = '31' tabindex="31" row="3" col="1" class="square-default"></div></td>
+    <td><div id = '32' tabindex="32" row="3" col="2" class="square-default"></div></td>
+    <td><div id = '33' tabindex="33" row="3" col="3" class="square-default"></div></td>
+  </tr>
+</table></td>
+      <td><table>
+  <tr>
+    <td><div id = '14' tabindex="14" row="1" col="4" class="square-default"></div></td>
+    <td><div id = '15' tabindex="15" row="1" col="5" class="square-default"></div></td>
+    <td><div id = '16' tabindex="16" row="1" col="6" class="square-default"></div></td>
+  </tr>
+  <tr>
+    <td><div id = '24' tabindex="24" row="2" col="4" class="square-default"></div></td>
+    <td><div id = '25' tabindex="25" row="2" col="5" class="square-default"></div></td>
+    <td><div id = '26' tabindex="26" row="2" col="6" class="square-default"></div></td>
+  </tr>
+  <tr>
+    <td><div id = '34' tabindex="34" row="3" col="4" class="square-default"></div></td>
+    <td><div id = '35' tabindex="35" row="3" col="5" class="square-default"></div></td>
+    <td><div id = '36' tabindex="36" row="3" col="6" class="square-default"></div></td>
+  </tr>
+</table></td>
+      <td><table>
+  <tr>
+    <td><div id = '17' tabindex="17" row="1" col="7" class="square-default"></div></td>
+    <td><div id = '18' tabindex="18" row="1" col="8" class="square-default"></div></td>
+    <td><div id = '19' tabindex="19" row="1" col="9" class="square-default"></div></td>
+  </tr>
+  <tr>
+    <td><div id = '27' tabindex="27" row="2" col="7" class="square-default"></div></td>
+    <td><div id = '28' tabindex="28" row="2" col="8" class="square-default"></div></td>
+    <td><div id = '29' tabindex="29" row="2" col="9" class="square-default"></div></td>
+  </tr>
+  <tr>
+    <td><div id = '37' tabindex="37" row="3" col="7" class="square-default"></div></td>
+    <td><div id = '38' tabindex="38" row="3" col="8" class="square-default"></div></td>
+    <td><div id = '39' tabindex="39" row="3" col="9" class="square-default"></div></td>
+  </tr>
+</table></td>
     </tr>
     <tr>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
+      <td><table>
+  <tr>
+    <td><div id = '41' tabindex="41" row="4" col="1" class="square-default"></div></td>
+    <td><div id = '42' tabindex="42" row="4" col="2" class="square-default"></div></td>
+    <td><div id = '43' tabindex="43" row="4" col="3" class="square-default"></div></td>
+  </tr>
+  <tr>
+    <td><div id = '51' tabindex="51" row="5" col="1" class="square-default"></div></td>
+    <td><div id = '52' tabindex="52" row="5" col="2" class="square-default"></div></td>
+    <td><div id = '53' tabindex="53" row="5" col="3" class="square-default"></div></td>
+  </tr>
+  <tr>
+    <td><div id = '61' tabindex="61" row="6" col="1" class="square-default"></div></td>
+    <td><div id = '62' tabindex="62" row="6" col="2" class="square-default"></div></td>
+    <td><div id = '63' tabindex="63" row="6" col="3" class="square-default"></div></td>
+  </tr>
+</table></td>
+      <td><table>
+  <tr>
+    <td><div id = '44' tabindex="44" row="4" col="4" class="square-default"></div></td>
+    <td><div id = '45' tabindex="45" row="4" col="5" class="square-default"></div></td>
+    <td><div id = '46' tabindex="46" row="4" col="6" class="square-default"></div></td>
+  </tr>
+  <tr>
+    <td><div id = '54' tabindex="54" row="5" col="4" class="square-default"></div></td>
+    <td><div id = '55' tabindex="55" row="5" col="5" class="square-default"></div></td>
+    <td><div id = '56' tabindex="56" row="5" col="6" class="square-default"></div></td>
+  </tr>
+  <tr>
+    <td><div id = '64' tabindex="64" row="6" col="4" class="square-default"></div></td>
+    <td><div id = '65' tabindex="65" row="6" col="5" class="square-default"></div></td>
+    <td><div id = '66' tabindex="66" row="6" col="6" class="square-default"></div></td>
+  </tr>
+</table></td>
+      <td><table>
+  <tr>
+    <td><div id = '47' tabindex="47" row="4" col="7" class="square-default"></div></td>
+    <td><div id = '48' tabindex="48" row="4" col="8" class="square-default"></div></td>
+    <td><div id = '49' tabindex="49" row="4" col="9" class="square-default"></div></td>
+  </tr>
+  <tr>
+    <td><div id = '57' tabindex="57" row="5" col="7" class="square-default"></div></td>
+    <td><div id = '58' tabindex="58" row="5" col="8" class="square-default"></div></td>
+    <td><div id = '59' tabindex="59" row="5" col="9" class="square-default"></div></td>
+  </tr>
+  <tr>
+    <td><div id = '67' tabindex="67" row="6" col="7" class="square-default"></div></td>
+    <td><div id = '68' tabindex="68" row="6" col="8" class="square-default"></div></td>
+    <td><div id = '69' tabindex="69" row="6" col="9" class="square-default"></div></td>
+  </tr>
+</table></td>
     </tr>
     <tr>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-    </tr>
-    <tr>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-    </tr>
-    <tr>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-    </tr>
-    <tr>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-    </tr>
-    <tr>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-    </tr>
-    <tr>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-    </tr>
-    <tr>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
-      <td><div class="square-default"></div></td>
+      <td><table>
+  <tr>
+    <td><div id = '71' tabindex="71" row="7" col="1" class="square-default"></div></td>
+    <td><div id = '72' tabindex="72" row="7" col="2" class="square-default"></div></td>
+    <td><div id = '73' tabindex="73" row="7" col="3" class="square-default"></div></td>
+  </tr>
+  <tr>
+    <td><div id = '81' tabindex="81" row="8" col="1" class="square-default"></div></td>
+    <td><div id = '82' tabindex="82" row="8" col="2" class="square-default"></div></td>
+    <td><div id = '83' tabindex="83" row="8" col="3" class="square-default"></div></td>
+  </tr>
+  <tr>
+    <td><div id = '91' tabindex="91" row="9" col="1" class="square-default"></div></td>
+    <td><div id = '92' tabindex="92" row="9" col="2" class="square-default"></div></td>
+    <td><div id = '93' tabindex="93" row="9" col="3" class="square-default"></div></td>
+  </tr>
+</table></td>
+      <td><table>
+  <tr>
+    <td><div id = '74' tabindex="74" row="7" col="4" class="square-default"></div></td>
+    <td><div id = '75' tabindex="75" row="7" col="5" class="square-default"></div></td>
+    <td><div id = '76' tabindex="76" row="7" col="6" class="square-default"></div></td>
+  </tr>
+  <tr>
+    <td><div id = '84' tabindex="84" row="8" col="4" class="square-default"></div></td>
+    <td><div id = '85' tabindex="85" row="8" col="5" class="square-default"></div></td>
+    <td><div id = '86' tabindex="86" row="8" col="6" class="square-default"></div></td>
+  </tr>
+  <tr>
+    <td><div id = '94' tabindex="94" row="9" col="4" class="square-default"></div></td>
+    <td><div id = '95' tabindex="95" row="9" col="5" class="square-default"></div></td>
+    <td><div id = '96' tabindex="96" row="9" col="6" class="square-default"></div></td>
+  </tr>
+</table></td>
+      <td><table>
+  <tr>
+    <td><div id = '77' tabindex="77" row="7" col="7" class="square-default"></div></td>
+    <td><div id = '78' tabindex="78" row="7" col="8" class="square-default"></div></td>
+    <td><div id = '79' tabindex="79" row="7" col="9" class="square-default"></div></td>
+  </tr>
+  <tr>
+    <td><div id = '87' tabindex="87" row="8" col="7" class="square-default"></div></td>
+    <td><div id = '88' tabindex="88" row="8" col="8" class="square-default"></div></td>
+    <td><div id = '89' tabindex="89" row="8" col="9" class="square-default"></div></td>
+  </tr>
+  <tr>
+    <td><div id = '97' tabindex="97" row="9" col="7" class="square-default"></div></td>
+    <td><div id = '98' tabindex="98" row="9" col="8" class="square-default"></div></td>
+    <td><div id = '99' tabindex="99" row="9" col="9" class="square-default"></div></td>
+  </tr>
+</table></td>
     </tr>
   </table>
 </div>

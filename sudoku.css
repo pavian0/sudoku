@@ -8,6 +8,7 @@ div.square-selected{
   font-size: 25px;
   vertical-align: middle;
   justify-content: center;
+  font-family: 'Open Sans', sans-serif;
 }
 div.square-default{
   background-color: lightgrey;
@@ -20,6 +21,7 @@ div.square-default{
   font-size: 25px;
   vertical-align: middle;
   border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
 }
 div.position3{
   height: 80%;

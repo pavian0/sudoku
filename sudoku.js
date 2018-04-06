@@ -32,12 +32,29 @@ function insertValue(number){
   document.activeElement.innerHTML = number;
 }
 
+function validateValue(number){
+  //var digits = (""+divid).split("");
+  let row = document.activeElement.getAttribute('row');
+  let col = document.activeElement.getAttribute('col');
+  var temp;
+  let values = [];
+  console.log("row: " + row + "col: " + col);
+  for(i=1;i<=9;i++){
+    temp = i + col;
+    console.log(temp);
+    values.push(document.getElementById(temp).innerHTML);
+  }
+  console.log(values);
+}
+
 function fillField(keyCode){
+  var divId = document.activeElement.id;
   if(keyCode >= 49 && keyCode <= 57){
     var number = keyCode - 48;
     console.log("You pressed key: " + number);
     console.log("Filling active element with number: " + number);
     insertValue(number);
+    validateValue(number);
   } else {
     console.log("This is not a number between 1 and 9!");
   }
