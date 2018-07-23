@@ -31,6 +31,13 @@ div.position3{
   vertical-align: middle;
 }
 
+div.botbuttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
 table.center1
 {
 margin-left: auto;

@@ -1,5 +1,6 @@
 function createNewGame(level){
   var toFill = 0;
+//var counter = 0;
   switch(level){
     case "easy":
       toFill = 40;
@@ -11,7 +12,21 @@ function createNewGame(level){
       toFill = 20;
       break;
   }
+  console.log("You chose level " + level +"filling " + toFill + " fields.");
+
+  /*
+  -Utworzyc 9 arrays od 1 do 9
+  -losuje z ktorego zbioru pobieram wartosc
+  -losuje numer ze zbioru 
+  -kopiuje wartosc
+  -wpisuje do tabeli
+  -usuwam wartosc ze zbioru
+  */
+  for(counter=1;i<=toFill;counter++){
+
 }
+}
+
 
 function resetGame(){
 
