@@ -12,16 +12,31 @@ function createNewGame(level){
       toFill = 20;
       break;
   }
-  console.log("You chose level " + level +"filling " + toFill + " fields.");
+  console.log("You chose level " + level +", filling " + toFill + " fields.");
 
   /*
   -Utworzyc 9 arrays od 1 do 9
   -losuje z ktorego zbioru pobieram wartosc
-  -losuje numer ze zbioru 
+  -losuje numer ze zbioru
   -kopiuje wartosc
   -wpisuje do tabeli
   -usuwam wartosc ze zbioru
   */
+
+/*
+****losowanie wartości całkowitej z zakresu 1 - 9****
+Math.floor(Math.random() * 9) +1;
+*/
+  //var arr1= arr2 = arr3 = arr4 = arr5 = arr6 = arr7 = arr8 = arr9 = [1,2,3,4,5,6,7,8,9];
+
+var arr = new Array(9);
+for (var i=0; i<9;i++){
+  arr[i] = new Array(9);
+  for(var j = 0; j<9;j++){
+    arr[i][j] = j+1;
+  }
+}
+
   for(counter=1;i<=toFill;counter++){
 
 }
